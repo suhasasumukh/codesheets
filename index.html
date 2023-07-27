@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CodeSheets</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./Assets/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <!--header section-->
+    <header class="header" id="page__header">
+        <div class="container">
+            <nav id="menu" class="main__nav">
+                <a href="#" class="logo"><img src="./Assets/textlogo.png" height="90" alt=""></a>
+                <div class="menu__toggle" id="toggle__menu">
+                    <img src="./Assets/Hamburger Menu.svg" alt="">
+                </div>
+                <div class="menu__dropdown">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link btn signup__btn">join waitlist</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--End of header section-->
+    <main id="main">
+        <section class="hero__section">
+            <div class="container row">
+                <div class="hero__content__left">
+                    <p class="p__bg">We are now allowing users to join waitlist, <a href="#" class="bg__link">Join
+                            Now!!</a></p>
+
+                    <div class="hero__left__title">
+                        <h1 class="main__title">Unlock the Secrets of Seamless Coding</h1>
+                        <p class="title__para">Master Programming with Cheat Sheets & Ace Interviews with our resources!
+                            Join the Waitlist Now & Level Up Your Skills at CodeSheets</p>
+                    </div>
+                    <div class="hero__btn">
+                        <input type="email" placeholder="Enter your e-mail address">
+                        <a href="#" class="btn">Join Waitlist</a>
+                    </div>
+                    <div class="companies">
+                        <p></p>
+                        <ul class="company__icon">
+                            <li class="icon__item">
+                                <a href="https://twitter.com/suhasasumukh" class="icon__link"><img
+                                        src="./Assets/Twitter Icon.svg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hero__content__right">
+                    <img src="./Assets/Illustration.png" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script type="text/javascript">
+        (function () {
+            let menuToggle = document.querySelector('.menu__toggle');
+            menuToggle.addEventListener('click', function (e) {
+                e.preventDefault();
+                let menu = document.querySelector('.main__nav');
+                menu.classList.toggle('is__open');
+            });
+        })();
+    </script>
+</body>
+
+</html>

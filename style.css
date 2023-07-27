@@ -1,0 +1,382 @@
+/*============== font Import============== */
+
+@import url("https://fonts.google.com/specimen/Nunito+Sans");
+
+/*============== BASIC REST ==============*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*====================================== CUSTOM PROPERTIES ======================================*/
+
+:root {
+    --main-cl: hsl(260, 71%, 56%);
+    --hero-bg-cl: hsl(214, 100%, 96%);
+    --hero-bg-cl2: hsl(330, 100%, 99%);
+    --dark-blue: hsl(233, 26%, 24%);
+    --grayish-blue: hsl(240, 5%, 82%);
+    --light-grayish-blue: hsl(220, 16%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --header-height: 6rem;
+    /*========== Font and typography ==========*/
+    --body-font: 'Nunito sans', sans-serif;
+    --big-font-size: 3.8rem;
+    --h1-font-size: 3.2rem;
+    --h2-font-size: 2.6rem;
+    --h3-font-size: 2rem;
+    --normal-font-size: 1.8rem;
+    --small-font-size: 1.4rem;
+    --smaller-font-size: 1.2rem;
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    /*========== Margenes Bottom ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+    /*========== Grid ==========*/
+    --num-of-grid-col: 4;
+}
+
+
+/* Font size for large devices */
+
+@media screen and (min-width: 968px) {
+    :root {
+        --big-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: var(--normal-font-size);
+    font-family: var(--body-font);
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+p {
+    line-height: 1.5;
+}
+
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+
+.container {
+    width: 100%;
+    max-width: 120rem;
+    padding: 0 2.5rem;
+    margin: 0 auto;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(var(--num-of-grid-col), 1fr);
+    gap: 0 1.5rem;
+}
+
+
+/*==================== HEADER SECTION STYLES ====================*/
+
+.header {
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    background-color: var(--hero-bg-cl);
+}
+
+.main__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu__dropdown {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    background-color: var(--dark-blue);
+    padding: 2.5rem 0;
+}
+
+.main__nav.is__open .menu__dropdown {
+    display: block;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 1rem;
+}
+
+.nav-link {
+    font-size: 2rem;
+    font-weight: var(--font-medium);
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.nav-item .btn {
+    background-color: transparent;
+}
+
+
+/*==================== HERO SECTION STYLES ====================*/
+
+.hero__section {
+    width: 100%;
+    padding: 8rem 0;
+    background-color: var(--hero-bg-cl);
+}
+
+.hero__content__left {
+    grid-column: span 4;
+    text-align: center;
+}
+
+.p__bg {
+    color: var(--White);
+    border: none;
+    display: inline-block;
+    padding: .4rem 2.5rem;
+    border-radius: 3rem;
+    font-size: var(--small-font-size);
+    background-color: var(--main-cl);
+}
+
+.bg__link {
+    color: var(--White);
+    text-decoration: underline;
+}
+
+.main__title {
+    margin: 3rem 0;
+    line-height: 1.5;
+    color: var(--main-cl);
+    font-size: var(--big-font-size);
+}
+
+.title__para {
+    color: var(--dark-blue);
+}
+
+.hero__btn {
+    margin: 3rem 0;
+}
+
+input[type="email"] {
+    padding: 1rem;
+    width: 100%;
+    border: 1px solid var(--grayish-blue);
+    border-radius: .3rem;
+    font-size: var(--small-font-size);
+    margin-bottom: 2rem;
+}
+
+.btn {
+    color: var(--White);
+    display: block;
+    padding: .8rem 0;
+    background-color: var(--main-cl);
+    border-radius: .3rem;
+}
+
+.companies {
+    margin-top: 4rem;
+    text-align: left;
+}
+
+.companies p {
+    color: var(--dark-blue);
+    font-weight: var(--font-medium);
+}
+
+.company__icon {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.icon__item {
+    margin: 1.5rem 1rem 1rem 0;
+}
+
+.hero__content__right {
+    display: none;
+}
+
+
+/*===========================================
+############### MEDIA QUERIES ###############
+=============================================*/
+
+@media screen and (min-width: 768px) {
+    :root {
+        --header-height: 8rem;
+        /*========== Font and typography ==========*/
+        --body-font: 'Nunito sans', sans-serif;
+        --big-font-size: 4rem;
+        --h1-font-size: 3.2rem;
+        --h2-font-size: 2.6rem;
+        --h3-font-size: 2rem;
+        --normal-font-size: 1.8rem;
+        --small-font-size: 1.4rem;
+        --smaller-font-size: 1.2rem;
+        /*========== Grid ==========*/
+        --num-of-grid-col: 8;
+    }
+
+    /*============= hero section =============*/
+    .hero__content__left {
+        grid-column: span 8;
+    }
+
+    .hero__btn {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    input[type="email"] {
+        width: 60%;
+        margin-bottom: 0;
+        font-size: 1.6rem;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 1.5rem 3.5rem;
+    }
+
+    .hero__btn {
+        margin: 4rem 0;
+    }
+
+    .companies {
+        margin-top: 6rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    :root {
+        --header-height: 10rem;
+        /*========== Font and typography ==========*/
+        --body-font: 'Nunito sans', sans-serif;
+        --big-font-size: 4rem;
+        --h1-font-size: 3.2rem;
+        --h2-font-size: 2.6rem;
+        --h3-font-size: 2rem;
+        --normal-font-size: 1.8rem;
+        --small-font-size: 1.4rem;
+        --smaller-font-size: 1.2rem;
+        /*========== Grid ==========*/
+        --num-of-grid-col: 12;
+    }
+
+    /*============= header section ============= */
+    .menu__toggle {
+        display: none;
+    }
+
+    .menu__dropdown {
+        width: initial;
+        display: block;
+        position: initial;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .nav-list {
+        flex-direction: row;
+    }
+
+    .nav-item:not(:last-child) {
+        margin-right: 3rem;
+    }
+
+    .nav-link {
+        color: var(--dark-blue);
+        font-size: var(--small-font-size);
+    }
+
+    .nav-item .btn {
+        color: var(--White);
+        background-color: var(--main-cl);
+    }
+
+    /*============= hero section =============*/
+    .hero__content__left {
+        grid-column: 1/7;
+        text-align: initial;
+    }
+
+    .p__bg {
+        text-align: center;
+    }
+
+    .hero__content__right {
+        display: block;
+        grid-column: 8/-1;
+    }
+
+    .hero__content__right img {
+        max-width: 80%;
+    }
+
+    .hero__btn {
+        display: flex;
+        justify-content: initial;
+    }
+
+    input[type="email"] {
+        margin-right: 2rem;
+    }
+
+    .company__icon {
+        margin-top: 2rem;
+    }
+}
