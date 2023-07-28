@@ -1,8 +1,5 @@
-/*============== font Import============== */
-
 @import url("https://fonts.google.com/specimen/Nunito+Sans");
 
-/*============== BASIC REST ==============*/
 
 *,
 *::before,
@@ -12,8 +9,6 @@
     box-sizing: border-box;
 }
 
-
-/*====================================== CUSTOM PROPERTIES ======================================*/
 
 :root {
     --main-cl: hsl(260, 71%, 56%);
@@ -25,7 +20,8 @@
     --very-light-gray: hsl(0, 0%, 98%);
     --White: hsl(0, 0%, 100%);
     --header-height: 6rem;
-    /*========== Font and typography ==========*/
+
+    
     --body-font: 'Nunito sans', sans-serif;
     --big-font-size: 3.8rem;
     --h1-font-size: 3.2rem;
@@ -34,10 +30,12 @@
     --normal-font-size: 1.8rem;
     --small-font-size: 1.4rem;
     --smaller-font-size: 1.2rem;
-    /*========== Font weight ==========*/
+
+    
     --font-medium: 500;
     --font-semi-bold: 600;
-    /*========== Margenes Bottom ==========*/
+
+    
     /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
     --mb-0-25: .25rem;
     --mb-0-5: .5rem;
@@ -47,12 +45,11 @@
     --mb-2: 2rem;
     --mb-2-5: 2.5rem;
     --mb-3: 3rem;
-    /*========== Grid ==========*/
+    
     --num-of-grid-col: 4;
 }
 
 
-/* Font size for large devices */
 
 @media screen and (min-width: 968px) {
     :root {
@@ -98,7 +95,6 @@ p {
 }
 
 
-/*==================== REUSABLE CSS CLASSES ====================*/
 
 .container {
     width: 100%;
@@ -114,7 +110,6 @@ p {
 }
 
 
-/*==================== HEADER SECTION STYLES ====================*/
 
 .header {
     width: 100%;
@@ -167,7 +162,6 @@ p {
 }
 
 
-/*==================== HERO SECTION STYLES ====================*/
 
 .hero__section {
     width: 100%;
@@ -251,14 +245,12 @@ input[type="email"] {
 }
 
 
-/*===========================================
-############### MEDIA QUERIES ###############
-=============================================*/
 
 @media screen and (min-width: 768px) {
     :root {
         --header-height: 8rem;
-        /*========== Font and typography ==========*/
+
+        
         --body-font: 'Nunito sans', sans-serif;
         --big-font-size: 4rem;
         --h1-font-size: 3.2rem;
@@ -267,11 +259,12 @@ input[type="email"] {
         --normal-font-size: 1.8rem;
         --small-font-size: 1.4rem;
         --smaller-font-size: 1.2rem;
-        /*========== Grid ==========*/
+
+        
         --num-of-grid-col: 8;
     }
 
-    /*============= hero section =============*/
+
     .hero__content__left {
         grid-column: span 8;
     }
@@ -304,7 +297,7 @@ input[type="email"] {
 @media screen and (min-width: 1000px) {
     :root {
         --header-height: 10rem;
-        /*========== Font and typography ==========*/
+
         --body-font: 'Nunito sans', sans-serif;
         --big-font-size: 4rem;
         --h1-font-size: 3.2rem;
@@ -313,11 +306,11 @@ input[type="email"] {
         --normal-font-size: 1.8rem;
         --small-font-size: 1.4rem;
         --smaller-font-size: 1.2rem;
-        /*========== Grid ==========*/
+
         --num-of-grid-col: 12;
     }
 
-    /*============= header section ============= */
+
     .menu__toggle {
         display: none;
     }
@@ -348,7 +341,7 @@ input[type="email"] {
         background-color: var(--main-cl);
     }
 
-    /*============= hero section =============*/
+
     .hero__content__left {
         grid-column: 1/7;
         text-align: initial;
